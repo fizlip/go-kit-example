@@ -11,23 +11,6 @@ type StringService interface {
   Count(string) int
 }
 
-type uppercaseRequest struct {
-  S string `json:"s"`
-}
-
-type uppercaseResponse struct {
-  V   string `json:"v"`
-  Err string `json:"err,omitempty"`
-}
-
-type countRequest struct {
-  S string `json:"s"`
-}
-
-type countResponse struct {
-  V int `json:"v"`
-}
-
 type stringService struct{}
 
 func (stringService) UpperCase(s string) (string, error){
